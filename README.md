@@ -1,3 +1,7 @@
+
+# Start Application
+DEBUG=express\_example:\* nodemon
+
 # Example Express Application
 
 [![Build Status](https://travis-ci.org/shapeshed/express_example.png?branch=master)](https://travis-ci.org/shapeshed/express_example)
@@ -16,4 +20,3 @@ There is a [further article][5] detailing how to continuously deploy Node.js app
 [3]: http://heroku.com
 [4]: http://expressjs.com/
 [5]: http://shapeshed.com/continuously-deploy-node-apps-with-github-travis-and-heroku/
-[6]: http://express-tutorial.herokuapp.com/
