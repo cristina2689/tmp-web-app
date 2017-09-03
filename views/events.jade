@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1.
+    Event List
+  ul
+    each user, i in events
+        li
+            a(href="mailto:#{user.email}")= user.description

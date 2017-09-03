@@ -1,0 +1,15 @@
+[33m[nodemon] 1.11.0[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching: *.*[39m
+[32m[nodemon] starting `node ./bin/www`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./bin/www`[39m
+[0mGET / [32m200 [0m514.834 ms - 3487[0m
+[0mGET /stylesheets/chunkfive-fontface.css [32m200 [0m6.878 ms - 582[0m
+[0mGET /stylesheets/style.css [32m200 [0m237.798 ms - 3981[0m
+[0mGET /fonts/chunkfive/Chunkfive-webfont.woff [32m200 [0m2.693 ms - 12136[0m
+[0mGET /favicon.ico [33m404 [0m132.006 ms - 1962[0m
+[33m[nodemon] 1.11.0[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching: *.*[39m
+[32m[nodemon] starting `node ./bin/www`[39m
