@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1.
+    Event: #{data.username}
+  ul
+    a(href="mailto:#{email}")= data.email
+  h3.
+    Events for which you have subscribed:

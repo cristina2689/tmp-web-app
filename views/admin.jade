@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1.
+    This is the profile for the priviledged user: #{data.username}
+  ul
+    a(href="mailto:#{email}")= data.email
+  h3.
+    You can delete any event from the event list or add a new event.

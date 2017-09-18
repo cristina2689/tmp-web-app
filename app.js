@@ -5,6 +5,8 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var routes = require('./routes/');
+var flash = require('connect-flash');
+var session = require('express-session');
 
 // Express and routes
 var app = express();
@@ -43,6 +45,11 @@ app.use(cookieParser());
 app.use(require('stylus').middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(checkAuth);
+app.use(flash());
+app.use(session({ cookie: { maxAge: 60000 },
+                  secret: 'woot',
+                  resave: false,
+                  saveUninitialized: false}));
 
 
 function checkAuth (req, res, next) {
@@ -50,7 +57,8 @@ function checkAuth (req, res, next) {
 
 	// don't serve /secure to those not logged in
 	// you should add to this list, for each and every secure url
-	if (req.url === '/secure' && (!req.session || !req.session.authenticated)) {
+	if (req.url === '/secure' && (!req.session || !req.authenticated)) {
+        console.log("sessions auth", req.authenticated, " ", req.session);
 		res.render('unauthorised', { status: 403 });
 		return;
 	}
